@@ -8,7 +8,7 @@ import { MongooseModule } from "@nestjs/mongoose";
   imports: [
     ProductModule, 
     //importación en el módulo principal para el uso de la base de datos, usando 2 parametros opcionales por problemas de compatibilidad de versiones
-    MongooseModule.forRoot('mongodb://localhost/products-api', {
+    MongooseModule.forRoot('mongodb+srv://ize:manashiky7@arkhalem-coe6j.mongodb.net/test?retryWrites=true&w=majority', {
     useNewUrlParser: true, 
     useUnifiedTopology: true})],
   controllers: [AppController],
