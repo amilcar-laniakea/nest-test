@@ -3,7 +3,7 @@ import { CreateProductDTO } from "./dto/product.dto";
 import { ProductService } from "./product.service";
 import { Product } from "./interfaces/product.interface";
 
-@Controller('product')
+@Controller('user')
 export class ProductController {
 
     constructor(private productService: ProductService){}
@@ -17,7 +17,7 @@ export class ProductController {
         //console.log(product);
         //Muestra por medio del protocolo Http con formato json la creación del producto
         return res.status(HttpStatus.OK).json ({
-            message: 'Product Created Succesfully',
+            message: 'User Created Succesfully',
             product
         });
 
@@ -28,41 +28,41 @@ export class ProductController {
         const products = await this.productService.getProducts();
         //Muestra por medio del protocolo Http con formato json la lista de productos
         return res.status(HttpStatus.OK).json({
-            message: 'List of Products in System',
+            message: 'List of Users in System',
             products
         });
     }
     //Hacer una consulta a la base de datos por medio del ID del producto, que es generado automaticamente por MongoDB
-    @Get('/:productID')
-    async getProduct(@Res() res, @Param('productID') productID){
-        const product = await this.productService.getProduct(productID);
+    @Get('/:userID')
+    async getProduct(@Res() res, @Param('userID') userID){
+        const product = await this.productService.getProduct(userID);
         //Sintaxis para mostrar en caso que el producto no exista en la base de datos
-        if (!product) throw new NotFoundException('Product Does not Exist');
+        if (!product) throw new NotFoundException('User Does not Exist');
         return res.status(HttpStatus.OK).json(product);
 
     }
 
     //Borra un producto de la base de datos por medio del ID
     @Delete('/delete')
-    async deleteProduct(@Res() res, @Query('productID') productID){
-        const productDeleted = await this.productService.deleteProduct(productID);
+    async deleteProduct(@Res() res, @Query('usertID') userID){
+        const productDeleted = await this.productService.deleteProduct(userID);
         //Sintaxis para mostrar en caso que el producto a eliminar no exista en la base de datos
-        if (!productDeleted) throw new NotFoundException('Product Does not Exist');
+        if (!productDeleted) throw new NotFoundException('User Does not Exist');
         //Muestra por medio del protocolo Http con formato json la operación positiva del borrado
         return res.status(HttpStatus.OK).json({
-            message: 'Product Sucessfully Deleted',
+            message: 'User Sucessfully Deleted',
             productDeleted
         })
     }
     //Actualizar un producto en la base de datos pro medio del ID por medio del decorador @Query
     @Put('/update')
-    async updateProduct(@Res() res, @Body() createProductDTO: CreateProductDTO, @Query('productID') productID) {
-        const updateProduct = await this.productService.updateProduct(productID, createProductDTO);
+    async updateProduct(@Res() res, @Body() createProductDTO: CreateProductDTO, @Query('userID') userID) {
+        const updateProduct = await this.productService.updateProduct(userID, createProductDTO);
          //Sintaxis para mostrar en caso que el producto  no exista en la base de datos
-        if (!updateProduct) throw new NotFoundException('Product Does not Exist');
+        if (!updateProduct) throw new NotFoundException('User Does not Exist');
         //Muestra por medio del protocolo Http con formato json la operación positiva de la actualizacion
         return res.status(HttpStatus.OK).json({
-            message: "Product Updated Successfully!",
+            message: "User Updated Successfully!",
             updateProduct
         });
     }

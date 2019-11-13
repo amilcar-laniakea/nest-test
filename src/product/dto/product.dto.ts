@@ -1,9 +1,12 @@
 
 //Objeto plantilla para crear los produtcos en la base de datos
 export class CreateProductDTO {
+    readonly rut: number;
     readonly name: string;
-    readonly description: string;
-    readonly imageURL: string;
-    readonly price: number;
+    readonly last_name: string;
+    readonly phone: string;
+    readonly sex: string;
+    readonly email: string;
+    readonly address: string;
     readonly createdAt: Date;
 }
