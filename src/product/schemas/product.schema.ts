@@ -1,6 +1,8 @@
-import { Schema } from "mongoose";
+import { Schema, Mongoose } from "mongoose";
 
+//
 export const ProductSchema = new Schema({
+    
     name: { type: String, required: true},
     description: String,
     imageURL: String,
@@ -9,4 +11,5 @@ export const ProductSchema = new Schema({
         type: Date,
         default: Date.now
     }
+   
 });

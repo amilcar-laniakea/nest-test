@@ -37,6 +37,12 @@ export class ProductController {
 
     }
 
+    /* @Get('GetProductInd')
+    async GetProductInd(@Res() res, @Query('name') name) {
+        const productInd = await this.productService.getProductInd();
+        if (!productInd) throw new NotFoundException('Product Does not Exist');
+        return res.status(HttpStatus.OK).json(productInd);
+    } */
 
     @Delete('/delete')
     async deleteProduct(@Res() res, @Query('productID') productID){

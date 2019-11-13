@@ -15,11 +15,30 @@ export class ProductService {
         const products = await this.productModel.find();
         return products;
     }
+    /* async getProductInd(): Promise<Product[]> {
+        const productInd = await this.productModel.find({
+            name: /mvc/i
+        }).exec(function(err, productInd) {
+            if (err) throw err;
+             
+            console.log(productInd);
+        });
+        return productInd;
+    }
+    async getProductInd2(): Promise<Product[]> {
+        const productInd = await this.productModel.find({
+            name: /mvc/i
+        }).exec(function(err, productInd) {
+            if (err) throw err;
+             
+            console.log(productInd);
+        });
+        return productInd;
+    } */
     async getProduct(productID: string): Promise<Product>{
         const product = await this.productModel.findById(productID);
         return product;
     }
-
 
     async createProduct(createProductDTO: CreateProductDTO): Promise<Product> {
         const product =  new this.productModel(createProductDTO);
