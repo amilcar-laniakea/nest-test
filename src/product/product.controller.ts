@@ -44,7 +44,7 @@ export class ProductController {
 
     //Borra un producto de la base de datos por medio del ID
     @Delete('/delete')
-    async deleteProduct(@Res() res, @Query('usertID') userID){
+    async deleteProduct(@Res() res, @Query('userID') userID){
         const productDeleted = await this.productService.deleteProduct(userID);
         //Sintaxis para mostrar en caso que el producto a eliminar no exista en la base de datos
         if (!productDeleted) throw new NotFoundException('User Does not Exist');
