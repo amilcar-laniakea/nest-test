@@ -74,5 +74,5 @@ En la "carpeta SRC" se encuentran las siguientes carpetas que se crearon para us
 </ul>
 
 
-<h2>Nota: en la rama que empieza con la frase "experimental", se encuentra un desarrollo preliminar de consultas avanzadas y validaciones por medio del paquete hapy-joi, aunque no es funcional.</h2>
-=======
+<h2>Nota: en la rama "test2", se encuentra un desarrollo preliminar de consultas avanzadas y validaciones por medio del paquete hapy-joi, aunque no es funcional.</h2>
+
