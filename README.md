@@ -71,15 +71,15 @@ En la "carpeta SRC" se encuentran las siguientes carpetas que se crearon para us
   }
   </li>
   <br>
-  <li>Usar el enlace "< nombre del host >/user/create" con el método POST, para crear un registro en la base de datos.</li>
+  <li>Usar el enlace "https://izzy-crud.herokuapp.com/user/create" con el método POST, para crear un registro en la base de datos.</li>
   <br>
-  <li>Usar el enlace "< nombre del host >/user/update?userID=< id del usuario >" con el método PUT para actualizar el registro seleccionado en la basee de datos.</li>
+  <li>Usar el enlace "https://izzy-crud.herokuapp.com/user/update?userID=< id del usuario >" con el método PUT para actualizar el registro seleccionado en la basee de datos.</li>
   <br>
-  <li>Usar el enlace "< nombre del host >/user" con el método GET para acceder a los registros creados en la base de datos</li>
+  <li>Usar el enlace "https://izzy-crud.herokuapp.com/user" con el método GET para acceder a los registros creados en la base de datos</li>
   <br>
-  <li>Usar el enlace "< nombre del host >/user/< id del usuario >" con el método GET para acceder a un registo con esa ID.</li>
+  <li>Usar el enlace "https://izzy-crud.herokuapp.com/user/< id del usuario >" con el método GET para acceder a un registo con esa ID.</li>
   <br>
-  <li>Usar el enlace "< nombre del host >/user/delete?userID=< id del producto >" con el método DELETE para borrar el registro seleccionado en la base de datos</li>  
+  <li>Usar el enlace "https://izzy-crud.herokuapp.com/user/delete?userID=< id del producto >" con el método DELETE para borrar el registro seleccionado en la base de datos</li>  
 </ul>
 
 <h2>Requisitos no finalizados:</h2>
