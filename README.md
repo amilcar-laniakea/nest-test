@@ -1,5 +1,7 @@
-<<<<<<< HEAD
+
 <h1>Documentación Preliminar(Faltan Ajustes)</h1>
+
+<h3><a href="https://izzy-crud.herokuapp.com/" target="_blank">Izzy App aqui</a></h3>
 
 En la "carpeta SRC" se encuentran las siguientes carpetas que se crearon para usarlas en el proyecto:
 
@@ -19,7 +21,7 @@ En la "carpeta SRC" se encuentran las siguientes carpetas que se crearon para us
 
 <h2>Problemas Conocidos Relacionado a la conexion remota(Heroku y Mongo DB Atlas)</h2>
 
-<p>Se logró la implementación ccrrecta de la app en la herramienta Heroku por medio del siguiente tutorial:</p>
+<p>Se logró la implementación correcta de la app en la herramienta Heroku por medio del siguiente tutorial:</p>
 
 <p><a href="https://www.joshmorony.com/deploying-a-production-nestjs-server-on-heroku/" target="_blank">Deploying a Production NestJS Server on Heroku</a></p>
 
@@ -32,7 +34,7 @@ En la "carpeta SRC" se encuentran las siguientes carpetas que se crearon para us
   <li>Crear un archivo llamado Procfile en la raiz del proyecto</li>
 </ul>
 
-<p>Sin embargo, la app implementada en Heroku presenta un problema de conexión a la base de datos de mongoDB Atlas, en modo local funciona sin problemas.</p>
+<p>Sin embargo, la app implementada en Heroku presenta un problema de conexión a la base de datos de mongoDB Atlas, en modo local funciona sin problemas.(Resuelto.)</p>
 
 <h2>Instruciones de uso (Instalación):</h2>
 
@@ -42,7 +44,7 @@ En la "carpeta SRC" se encuentran las siguientes carpetas que se crearon para us
   <li>Moverse al archivo en el root de "app.module.ts" y elegir la conexion de Mongo DB o MongoDB atlas(por defecto la conexion remota se encuentra comentada) debe tener instalado Mongo DB en la PC<a href="https://www.mongodb.com/download-center/enterprise" target="_blank">Descargar MongoDB, </a><a href="https://www.mongodb.com/cloud/atlas" target="_blank">Usar MongoDB Atlas</a></li>
 </ul>
 
-<h2>Instruciones de uso (Usar Aplicación Postman, por ahora funciona el método en local):</h2>
+<h2>Instruciones de uso (Usar Aplicación Postman, Ya funciona en la nube):</h2>
 
 <ul>
   <li>La aplicación no posee frontend, por lo que la herramienta Postman es necesaria</li>
@@ -74,12 +76,3 @@ En la "carpeta SRC" se encuentran las siguientes carpetas que se crearon para us
 
 <h2>Nota: en la rama que empieza con la frase "experimental", se encuentra un desarrollo preliminar de consultas avanzadas y validaciones por medio del paquete hapy-joi, aunque no es funcional.</h2>
 =======
-Proyecto de Prueba amilcar:
-el módulo produtcs hace referencia a lo que se quiere conseguir, este maneja CRUD:
-
-en product.Schema.ts se describe el tipo de datos (Que por ahora maneja la aplicacion)
-
-en el archivo product.service.t se describe todos los métodos o endpoints de la aplicación
-
-su llamado está en el archivo product.controller.ts
->>>>>>> abb104a22ec6bd649cd698f00957c4f1bee814a9
