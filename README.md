@@ -53,24 +53,33 @@ En la "carpeta SRC" se encuentran las siguientes carpetas que se crearon para us
 <h2>Instruciones de uso (Usar Aplicación Postman - cloud mode):</h2>
 
 <ul>
-  <li>La aplicación no posee frontend, por lo que la herramienta Postman es necesaria</li>
-  <li>Usar el enlace "< nombre del host >/user/create" con el método POST, en el Header usando el key "Content-Type" y en el campo value "aplication/json" para crear un registro en la base de datos, usando en el Body en modo "raw" un formato de json como el siguiente: 
+  <li>La aplicación no posee frontend, por lo que la herramienta Postman es necesaria.</li>
   <br>
+  <li>El ID del item lo genera automaticamente la base de datos, usar el método GET descrito abajo para consultarlos.</li>
+  <br>
+  <li>Formato .json Usado para los metodos POST y PUT en el Header usando el key "Content-Type" y en el campo value "aplication/json", usando en el Body en modo "raw":</li>
+  <br>
+  <li>
   {
-	"rut": 34234123456789,
-	"name": "Jesús2",
-	"last_name": "Perez2",
-	"phone": "(123)12234456",
-	"sex": "masculino",
-	"email": "addefg@gmail.com",
-	"address": "Lorem ipsum noto lorem"
+  "rut": 34234123456789,
+  "name": "Jesús2",
+  "last_name": "Perez2",
+  "phone": "(123)12234456",
+  "sex": "masculino",
+  "email": "addefg@gmail.com",
+  "address": "Lorem ipsum noto lorem"
   }
-  <br>
   </li>
+  <br>
+  <li>Usar el enlace "< nombre del host >/user/create" con el método POST, para crear un registro en la base de datos.</li>
+  <br>
+  <li>Usar el enlace "< nombre del host >/user/update?userID=< id del usuario >" con el método PUT para actualizar el registro seleccionado en la basee de datos.</li>
+  <br>
   <li>Usar el enlace "< nombre del host >/user" con el método GET para acceder a los registros creados en la base de datos</li>
-  <li>usar el enlace "< nombre del host >/user/delete?userID=< id del producto >" con el método DELETE para borrar el registro seleccionado en la base de datos</li>
-  <li>usar el enlace "< nombre del host >/user/update?userID=< id del producto >" con el método PUT para actualizar el registro seleccionado en la basee de datos(usar en el Body-raw el json usado con la sentencia crear)</li>
-   <li>usar el enlace "< nombre del host >/user/create" con el método POST para crear un registro  en la basee de datos(usar en el Body-raw el json usado con la sentencia crear)</li>
+  <br>
+  <li>Usar el enlace "< nombre del host >/user/< id del usuario >" con el método GET para acceder a un registo con esa ID.</li>
+  <br>
+  <li>Usar el enlace "< nombre del host >/user/delete?userID=< id del producto >" con el método DELETE para borrar el registro seleccionado en la base de datos</li>  
 </ul>
 
 <h2>Requisitos no finalizados:</h2>
@@ -80,7 +89,6 @@ En la "carpeta SRC" se encuentran las siguientes carpetas que se crearon para us
   <li>Consultas GET por cada campo</li>
   <li>Más número de direcciones</li>
 </ul>
-
 
 <h3>Nota: en la rama "experimental-checks-for-individual-querys", se encuentra un desarrollo preliminar de consultas avanzadas, aunque no es funcional.</h3>
 <h3>Nota: en la rama "test2", se encuentra un desarrollo preliminar de  validaciones por medio del paquete hapy-joi, aunque no es funcional.</h3>
