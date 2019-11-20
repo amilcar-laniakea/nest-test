@@ -6,8 +6,10 @@ export class AppService {
     return `<h1>Izzy App</h1>
 
     <h3><a href="https://github.com/amilcar-laniakea/nest-test/tree/test" target="_blank">Documentación entera aqui</a></h3>
+    <h3><a href="https://documenter.getpostman.com/view/9537182/SW7Z599g?version=latest" target="_blank">Documentación en Postman aqui</a></h3>
+    <h3><a href="https://www.getpostman.com/collections/64047212f4404472c881" target="_blank">Enlace de colección (Postman) aqui</a></h3>
 
-    <h2>Instruciones de uso (Se recomienda usar Aplicación Postman):</h2>
+    <h2>Instruciones de uso (Se recomienda usar Aplicación Postman - Ya detallada en la actualización de la documentación en Postman):</h2>
 
     <br>
 
